@@ -1,2 +1,2 @@
-# raid-discord-by-kovil
-kovil group: https://discord.gg/XjYYdA44pm
+# ARCHIVE TO RAID DISCORD, BY KOVIL
+KOVIL LAND: https://discord.gg/XjYYdA44pm

